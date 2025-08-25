@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="637547f5-3ed7-4d21-b469-5d34c77919fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/easywedding/core/entities/Guest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/easywedding/core/entities/SeatingTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/easywedding/core/entities/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/easywedding/core/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/easywedding/core/entities/Wedding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/easywedding/core/enums/PermissionLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/easywedding/core/enums/RsvpStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/easywedding/core/enums/TaskStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/application/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/main/java/easywedding/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/easywedding/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webapi/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapi/src/main/java/easywedding/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/easywedding/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2ySRSZjSsFn2oc7qsTrsOhR41sE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.com.easywedding.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "F:/git/EasyWedding/EasyWedding",
+    "onboarding.tips.debug.path": "F:/git/EasyWedding/EasyWedding/webapi/src/main/java/wedding/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\git\EasyWedding\EasyWedding\application\src\main\java\easywedding" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.com.easywedding.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="easywedding.Main" />
+      <module name="application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="easywedding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.easywedding.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.easywedding.Main" />
+      <module name="webapi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.easywedding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.com.easywedding.Main" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="637547f5-3ed7-4d21-b469-5d34c77919fa" name="Changes" comment="" />
+      <created>1749825990281</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749825990281</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/core/src/main/java/easywedding/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/infrastructure/src/main/java/easywedding/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
