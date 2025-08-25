@@ -1,17 +1,21 @@
-package com.easywedding.core.entities;
+package com.easywedding.infrastructure.jpa.entities;
 
-public class SeatingTable {
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "seating_table")
+public class SeatingTableEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long number;
+
     private String name;
+
+    @Column(name = "wedding_id")
     private Long weddingId;
 
-    public SeatingTable() {
-    }
-
-    public SeatingTable(Long number, String name, Long weddingId) {
-        this.number = number;
-        this.name = name;
-        this.weddingId = weddingId;
+    public SeatingTableEntity() {
     }
 
     public Long getNumber() {

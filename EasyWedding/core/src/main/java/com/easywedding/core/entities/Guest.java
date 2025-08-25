@@ -8,10 +8,13 @@ public class Guest {
     private String phoneNumber;
     private String notes;
     private RsvpStatus status;
+    private Long weddingId;
+    private Long tableId;
 
-    public Guest() {
-    }
+    // Constructors
+    public Guest() {}
 
+    // Getters & Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -26,4 +29,10 @@ public class Guest {
 
     public RsvpStatus getStatus() { return status; }
     public void setStatus(RsvpStatus status) { this.status = status; }
+
+    public Long getWeddingId() { return weddingId; }
+    public void setWeddingId(Long weddingId) { this.weddingId = weddingId; }
+
+    public Long getTableId() { return tableId; }
+    public void setTableId(Long tableId) { this.tableId = tableId; }
 }
