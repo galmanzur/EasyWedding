@@ -1,17 +1,17 @@
-package com.easywedding.core.entities;
+package com.easywedding.webapi.dtos;
 
 import java.time.LocalDate;
 
-public class Wedding {
+public class WeddingDto {
     private Long id;
     private String description;
     private LocalDate date;
     private String location;
 
     // Constructors
-    public Wedding() {}
+    public WeddingDto() {}
 
-    public Wedding(Long id, String description, LocalDate date, String location) {
+    public WeddingDto(Long id, String description, LocalDate date, String location) {
         this.id = id;
         this.description = description;
         this.date = date;

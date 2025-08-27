@@ -1,22 +1,19 @@
-package com.easywedding.core.entities;
+package com.easywedding.infrastructure.jpa.entities;
 
+import jakarta.persistence.*;
 import java.time.LocalDate;
 
-public class Wedding {
+@Entity
+@Table(name = "Wedding")
+public class WeddingEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String description;
     private LocalDate date;
     private String location;
-
-    // Constructors
-    public Wedding() {}
-
-    public Wedding(Long id, String description, LocalDate date, String location) {
-        this.id = id;
-        this.description = description;
-        this.date = date;
-        this.location = location;
-    }
 
     // Getters and Setters
     public Long getId() { return id; }
