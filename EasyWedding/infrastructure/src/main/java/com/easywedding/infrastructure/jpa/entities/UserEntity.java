@@ -1,12 +1,21 @@
-package com.easywedding.core.entities;
+package com.easywedding.infrastructure.jpa.entities;
 
 import com.easywedding.core.enums.PermissionLevel;
+import jakarta.persistence.*;
 
-public class User {
+@Entity
+@Table(name = "User")
+public class UserEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String username;
     private String password;
     private Long weddingId;
+
+    @Enumerated(EnumType.STRING)
     private PermissionLevel permissionLevel;
 
     public Long getId() {
