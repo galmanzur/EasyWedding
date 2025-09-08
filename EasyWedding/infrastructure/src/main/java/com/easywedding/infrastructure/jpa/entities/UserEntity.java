@@ -4,7 +4,7 @@ import com.easywedding.core.enums.PermissionLevel;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "users")
+@Table(name = "user")
 public class UserEntity {
 
     @Id
