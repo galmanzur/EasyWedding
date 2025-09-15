@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface SeatingTableJpaRepository extends JpaRepository<SeatingTableEntity, Long> {
+public interface SeatingTableRepository extends JpaRepository<SeatingTableEntity, Long> {
     List<SeatingTableEntity> findByWeddingId(Long weddingId);
 }

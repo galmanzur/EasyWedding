@@ -7,16 +7,15 @@ import jakarta.persistence.*;
 public class SeatingTableEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long number;
 
     private String name;
 
     @Column(name = "wedding_id")
+    @JoinColumn(name = "wedding_id", referencedColumnName = "id", nullable = true)
     private Long weddingId;
 
-    public SeatingTableEntity() {
-    }
+    public SeatingTableEntity() {}
 
     public Long getNumber() {
         return number;

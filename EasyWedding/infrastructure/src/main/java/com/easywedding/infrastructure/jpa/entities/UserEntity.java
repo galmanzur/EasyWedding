@@ -15,6 +15,7 @@ public class UserEntity {
     private String password;
 
     @Column(name = "wedding_id")
+    @JoinColumn(name = "wedding_id", referencedColumnName = "id", nullable = false)
     private Long weddingId;
 
     @Enumerated(EnumType.STRING)

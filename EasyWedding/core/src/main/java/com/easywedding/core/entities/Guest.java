@@ -9,12 +9,10 @@ public class Guest {
     private String notes;
     private RsvpStatus status;
     private Long weddingId;
-    private Long tableId;
+    private Long tableNumber;
 
-    // Constructors
     public Guest() {}
 
-    // Getters & Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -33,6 +31,6 @@ public class Guest {
     public Long getWeddingId() { return weddingId; }
     public void setWeddingId(Long weddingId) { this.weddingId = weddingId; }
 
-    public Long getTableId() { return tableId; }
-    public void setTableId(Long tableId) { this.tableId = tableId; }
+    public Long getTableNumber() { return tableNumber; }
+    public void setTableNumber(Long tableNumber) { this.tableNumber = tableNumber; }
 }

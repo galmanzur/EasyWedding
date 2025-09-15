@@ -1,10 +1,10 @@
 package com.easywedding.infrastructure.jpa.entities;
 
-import jakarta.persistence.*;
 import com.easywedding.core.enums.RsvpStatus;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Guest")
+@Table(name = "guest")
 public class GuestEntity {
 
     @Id
@@ -12,19 +12,22 @@ public class GuestEntity {
     private Long id;
 
     private String name;
+
+    @Column(name = "phone_number")
     private String phoneNumber;
+
     private String notes;
 
     @Enumerated(EnumType.STRING)
     private RsvpStatus status;
 
     @Column(name = "wedding_id")
+    @JoinColumn(name = "wedding_id", referencedColumnName = "id", nullable = true)
     private Long weddingId;
 
-    @Column(name = "table_id")
-    private Long tableId;
-
-    // --- Getters and Setters ---
+    @ManyToOne
+    @JoinColumn(name = "table_number", referencedColumnName = "number", nullable = false)
+    private SeatingTableEntity table;
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -44,6 +47,6 @@ public class GuestEntity {
     public Long getWeddingId() { return weddingId; }
     public void setWeddingId(Long weddingId) { this.weddingId = weddingId; }
 
-    public Long getTableId() { return tableId; }
-    public void setTableId(Long tableId) { this.tableId = tableId; }
+    public SeatingTableEntity getTable() { return table; }
+    public void setTable(SeatingTableEntity table) { this.table = table; }
 }

@@ -4,7 +4,7 @@ import com.easywedding.core.abstractRepositories.ISeatingTableRepository;
 import com.easywedding.core.entities.SeatingTable;
 import com.easywedding.infrastructure.jpa.entities.SeatingTableEntity;
 import com.easywedding.infrastructure.jpa.mappers.SeatingTableMapper;
-import com.easywedding.infrastructure.jpa.repositories.SeatingTableJpaRepository;
+import com.easywedding.infrastructure.jpa.repositories.SeatingTableRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,10 +13,10 @@ import java.util.stream.Collectors;
 @Repository
 public class SeatingTableRepositoryAdapter implements ISeatingTableRepository {
 
-    private final SeatingTableJpaRepository jpaRepository;
+    private final SeatingTableRepository jpaRepository;
     private final SeatingTableMapper mapper;
 
-    public SeatingTableRepositoryAdapter(SeatingTableJpaRepository jpaRepository, SeatingTableMapper mapper) {
+    public SeatingTableRepositoryAdapter(SeatingTableRepository jpaRepository, SeatingTableMapper mapper) {
         this.jpaRepository = jpaRepository;
         this.mapper = mapper;
     }

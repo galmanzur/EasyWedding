@@ -1,14 +1,16 @@
 package com.easywedding.core.abstractServices;
 
 import com.easywedding.core.entities.Guest;
+
 import java.util.List;
 
-/**
- * Interface for guest-related operations.
- */
 public interface IGuestService {
     Guest createGuest(Guest guest);
-    /*List<Guest> getGuestsByWedding(Long weddingId);*/
     Guest updateGuest(Guest guest);
-    void deleteGuest(Long guestId);
+    void delete(Long id);
+    Guest getById(Long id);
+    List<Guest> getByWeddingId(Long weddingId);
+    List<Guest> searchByName(String name);
+    List<Guest> getByTableNumber(Long tableNumber);
+    long countByTableNumber(Long tableNumber);
 }
