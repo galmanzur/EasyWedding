@@ -14,13 +14,17 @@ public class UserEntity {
     private String username;
     private String password;
 
-    @Column(name = "wedding_id")
-    @JoinColumn(name = "wedding_id", referencedColumnName = "id", nullable = false)
-    private Long weddingId;
+    // Foreign key to WeddingEntity
+    @ManyToOne
+    @JoinColumn(name = "wedding_id", referencedColumnName = "id", nullable = true)
+    private WeddingEntity wedding;
 
     @Enumerated(EnumType.STRING)
     private PermissionLevel permissionLevel;
 
+    public UserEntity() {}
+
+    // Getters & setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -30,8 +34,8 @@ public class UserEntity {
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
 
-    public Long getWeddingId() { return weddingId; }
-    public void setWeddingId(Long weddingId) { this.weddingId = weddingId; }
+    public WeddingEntity getWedding() { return wedding; }
+    public void setWedding(WeddingEntity wedding) { this.wedding = wedding; }
 
     public PermissionLevel getPermissionLevel() { return permissionLevel; }
     public void setPermissionLevel(PermissionLevel permissionLevel) { this.permissionLevel = permissionLevel; }

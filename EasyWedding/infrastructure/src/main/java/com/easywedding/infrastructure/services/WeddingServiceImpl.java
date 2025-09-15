@@ -5,6 +5,8 @@ import com.easywedding.core.abstractServices.IWeddingService;
 import com.easywedding.core.entities.Wedding;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class WeddingServiceImpl implements IWeddingService {
 
@@ -22,6 +24,11 @@ public class WeddingServiceImpl implements IWeddingService {
     @Override
     public Wedding getById(Long id) {
         return repository.findById(id);
+    }
+
+    @Override
+    public List<Wedding> findAll() {
+        return repository.findAll();
     }
 
     @Override

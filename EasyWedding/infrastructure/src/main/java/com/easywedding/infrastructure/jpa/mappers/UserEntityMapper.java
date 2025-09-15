@@ -2,27 +2,20 @@ package com.easywedding.infrastructure.jpa.mappers;
 
 import com.easywedding.core.entities.User;
 import com.easywedding.infrastructure.jpa.entities.UserEntity;
-import org.springframework.stereotype.Component;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
-@Component
-public class UserEntityMapper {
-    public User toDomain(UserEntity entity) {
-        User user = new User();
-        user.setId(entity.getId());
-        user.setUsername(entity.getUsername());
-        user.setPassword(entity.getPassword());
-        user.setWeddingId(entity.getWeddingId());
-        user.setPermissionLevel(entity.getPermissionLevel());
-        return user;
-    }
+@Mapper(componentModel = "spring")
+public interface UserEntityMapper {
 
-    public UserEntity toEntity(User user) {
-        UserEntity entity = new UserEntity();
-        entity.setId(user.getId());
-        entity.setUsername(user.getUsername());
-        entity.setPassword(user.getPassword());
-        entity.setWeddingId(user.getWeddingId());
-        entity.setPermissionLevel(user.getPermissionLevel());
-        return entity;
-    }
+    // Core -> Entity
+    // Ignore wedding because in core we only store weddingId.
+    // The actual WeddingEntity will be set in the adapter/service.
+    @Mapping(target = "wedding", ignore = true)
+    UserEntity toEntity(User user);
+
+    // Entity -> Core
+    // Extract wedding.id into weddingId for the core model.
+    @Mapping(target = "weddingId", source = "wedding.id")
+    User toDomain(UserEntity entity);
 }

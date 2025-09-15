@@ -2,9 +2,11 @@ package com.easywedding.infrastructure.jpa.entities;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name = "Wedding")
+@Table(name = "wedding")
 public class WeddingEntity {
 
     @Id
@@ -14,6 +16,20 @@ public class WeddingEntity {
     private String description;
     private LocalDate date;
     private String location;
+
+    // One wedding has many users
+    @OneToMany(mappedBy = "wedding", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<UserEntity> users = new ArrayList<>();
+
+    // One wedding has many guests
+    @OneToMany(mappedBy = "wedding", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<GuestEntity> guests = new ArrayList<>();
+
+    // One wedding has many seating tables
+    @OneToMany(mappedBy = "wedding", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<SeatingTableEntity> seatingTables = new ArrayList<>();
+
+    public WeddingEntity() {}
 
     // Getters and Setters
     public Long getId() { return id; }
@@ -27,4 +43,13 @@ public class WeddingEntity {
 
     public String getLocation() { return location; }
     public void setLocation(String location) { this.location = location; }
+
+    public List<UserEntity> getUsers() { return users; }
+    public void setUsers(List<UserEntity> users) { this.users = users; }
+
+    public List<GuestEntity> getGuests() { return guests; }
+    public void setGuests(List<GuestEntity> guests) { this.guests = guests; }
+
+    public List<SeatingTableEntity> getSeatingTables() { return seatingTables; }
+    public void setSeatingTables(List<SeatingTableEntity> seatingTables) { this.seatingTables = seatingTables; }
 }

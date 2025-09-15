@@ -2,41 +2,21 @@ package com.easywedding.infrastructure.jpa.mappers;
 
 import com.easywedding.core.entities.Guest;
 import com.easywedding.infrastructure.jpa.entities.GuestEntity;
-import com.easywedding.infrastructure.jpa.entities.SeatingTableEntity;
-import org.springframework.stereotype.Component;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
-@Component
-public class GuestEntityMapper {
+@Mapper(componentModel = "spring")
+public interface GuestEntityMapper {
 
-    public GuestEntity toEntity(Guest domain) {
-        GuestEntity entity = new GuestEntity();
-        entity.setId(domain.getId());
-        entity.setName(domain.getName());
-        entity.setPhoneNumber(domain.getPhoneNumber());
-        entity.setNotes(domain.getNotes());
-        entity.setStatus(domain.getStatus());
-        entity.setWeddingId(domain.getWeddingId());
+    // Core -> Entity
+    // Ignore wedding and table, these will be set in the adapter/service.
+    @Mapping(target = "wedding", ignore = true)
+    @Mapping(target = "table", ignore = true)
+    GuestEntity toEntity(Guest guest);
 
-        SeatingTableEntity table = new SeatingTableEntity();
-        table.setNumber(domain.getTableNumber());
-        entity.setTable(table);
-
-        return entity;
-    }
-
-    public Guest toDomain(GuestEntity entity) {
-        Guest domain = new Guest();
-        domain.setId(entity.getId());
-        domain.setName(entity.getName());
-        domain.setPhoneNumber(entity.getPhoneNumber());
-        domain.setNotes(entity.getNotes());
-        domain.setStatus(entity.getStatus());
-        domain.setWeddingId(entity.getWeddingId());
-
-        if (entity.getTable() != null) {
-            domain.setTableNumber(entity.getTable().getNumber());
-        }
-
-        return domain;
-    }
+    // Entity -> Core
+    // Map nested IDs back to simple Longs in the core entity.
+    @Mapping(target = "weddingId", source = "wedding.id")
+    @Mapping(target = "tableNumber", source = "table.number")
+    Guest toDomain(GuestEntity entity);
 }

@@ -10,6 +10,9 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RestController
 @RequestMapping("/api/weddings")
 public class WeddingController {
@@ -46,6 +49,20 @@ public class WeddingController {
             @PathVariable("id") Long id
     ) {
         return mapper.toDto(service.getById(id));
+    }
+
+    @GetMapping
+    @Operation(
+            summary = "Get all weddings",
+            description = "Retrieves all weddings in the system and returns them as a list of WeddingDto."
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "List of weddings returned successfully")
+    })
+    public List<WeddingDto> getAll() {
+        return service.findAll().stream()
+                .map(mapper::toDto)
+                .collect(Collectors.toList());
     }
 
     @DeleteMapping("/{id}")

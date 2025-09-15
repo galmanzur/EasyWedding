@@ -21,14 +21,19 @@ public class GuestEntity {
     @Enumerated(EnumType.STRING)
     private RsvpStatus status;
 
-    @Column(name = "wedding_id")
-    @JoinColumn(name = "wedding_id", referencedColumnName = "id", nullable = true)
-    private Long weddingId;
-
+    // Foreign key to WeddingEntity
     @ManyToOne
-    @JoinColumn(name = "table_number", referencedColumnName = "number", nullable = false)
+    @JoinColumn(name = "wedding_id", referencedColumnName = "id", nullable = true)
+    private WeddingEntity wedding;
+
+    // Foreign key to SeatingTableEntity
+    @ManyToOne
+    @JoinColumn(name = "table_number", referencedColumnName = "number", nullable = true)
     private SeatingTableEntity table;
 
+    public GuestEntity() {}
+
+    // Getters & setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -44,8 +49,8 @@ public class GuestEntity {
     public RsvpStatus getStatus() { return status; }
     public void setStatus(RsvpStatus status) { this.status = status; }
 
-    public Long getWeddingId() { return weddingId; }
-    public void setWeddingId(Long weddingId) { this.weddingId = weddingId; }
+    public WeddingEntity getWedding() { return wedding; }
+    public void setWedding(WeddingEntity wedding) { this.wedding = wedding; }
 
     public SeatingTableEntity getTable() { return table; }
     public void setTable(SeatingTableEntity table) { this.table = table; }

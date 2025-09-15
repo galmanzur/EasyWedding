@@ -1,6 +1,8 @@
 package com.easywedding.infrastructure.jpa.entities;
 
 import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "seating_table")
@@ -11,12 +13,16 @@ public class SeatingTableEntity {
 
     private String name;
 
-    @Column(name = "wedding_id")
+    @ManyToOne
     @JoinColumn(name = "wedding_id", referencedColumnName = "id", nullable = true)
-    private Long weddingId;
+    private WeddingEntity wedding;
+
+    @OneToMany(mappedBy = "table", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<GuestEntity> guests = new ArrayList<>();
 
     public SeatingTableEntity() {}
 
+    // Getters & Setters
     public Long getNumber() {
         return number;
     }
@@ -33,11 +39,19 @@ public class SeatingTableEntity {
         this.name = name;
     }
 
-    public Long getWeddingId() {
-        return weddingId;
+    public WeddingEntity getWedding() {
+        return wedding;
     }
 
-    public void setWeddingId(Long weddingId) {
-        this.weddingId = weddingId;
+    public void setWedding(WeddingEntity wedding) {
+        this.wedding = wedding;
+    }
+
+    public List<GuestEntity> getGuests() {
+        return guests;
+    }
+
+    public void setGuests(List<GuestEntity> guests) {
+        this.guests = guests;
     }
 }
