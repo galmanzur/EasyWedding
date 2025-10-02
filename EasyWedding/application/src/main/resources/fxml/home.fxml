@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.easywedding.application.controllers.HomeController"
+            prefWidth="1000" prefHeight="680"
+            id="homeRoot">
+
+    <!-- Load separated stylesheets -->
+    <stylesheets>
+        <URL value="@/css/base.css"/>
+        <URL value="@/css/typography.css"/>
+        <URL value="@/css/buttons.css"/>
+        <URL value="@/css/card.css"/>
+        <URL value="@/css/home.css"/>
+    </stylesheets>
+
+    <!-- Center content -->
+    <StackPane AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+               AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <VBox alignment="CENTER" spacing="24" maxWidth="720"
+              StackPane.alignment="CENTER"
+              styleClass="card">
+
+            <!-- Optional logo (put /images/logo.png). If missing, just won’t render -->
+            <ImageView fx:id="logoImage" fitHeight="96" preserveRatio="true" pickOnBounds="true">
+                <image>
+                    <Image url="@/images/logo.png" />
+                </image>
+            </ImageView>
+
+            <Label text="EasyWedding"                 styleClass="title"/>
+            <Label text="Plan smarter By Easy Wedding." styleClass="subtitle"/>
+
+            <HBox spacing="12" alignment="CENTER">
+                <Button fx:id="loginBtn"  text="Login"   styleClass="btn btn-primary"/>
+                <Button fx:id="signupBtn" text="Sign Up" styleClass="btn btn-secondary"/>
+            </HBox>
+
+            <Separator prefWidth="420"/>
+            <Label text="Manage guests • Tables • RSVPs" styleClass="muted"/>
+        </VBox>
+    </StackPane>
+
+    <!-- Small brand note -->
+    <Label text="© EasyWedding" id="brandFoot"
+           AnchorPane.rightAnchor="16" AnchorPane.bottomAnchor="12"/>
+</AnchorPane>
