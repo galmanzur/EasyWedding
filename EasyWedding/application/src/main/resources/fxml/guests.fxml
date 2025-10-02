@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.easywedding.application.controllers.GuestController">
+
+    <center>
+        <TableView fx:id="guestsTable">
+            <columns>
+<!--                <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>-->
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="150"/>
+                <TableColumn fx:id="phoneColumn" text="Phone" prefWidth="120"/>
+                <TableColumn fx:id="attendingColumn" text="Attending" prefWidth="100"/>
+                <TableColumn fx:id="tableNumberColumn" text="Table" prefWidth="80"/>
+                <TableColumn fx:id="notesColumn" text="Notes" prefWidth="200"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
