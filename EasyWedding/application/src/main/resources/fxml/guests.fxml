@@ -4,12 +4,12 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.easywedding.application.controllers.GuestsController">
+            fx:controller="com.easywedding.application.controllers.GuestController">
 
     <center>
         <TableView fx:id="guestsTable">
             <columns>
-                <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+<!--                <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>-->
                 <TableColumn fx:id="nameColumn" text="Name" prefWidth="150"/>
                 <TableColumn fx:id="phoneColumn" text="Phone" prefWidth="120"/>
                 <TableColumn fx:id="attendingColumn" text="Attending" prefWidth="100"/>
