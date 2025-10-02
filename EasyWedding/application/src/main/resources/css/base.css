@@ -1,0 +1,19 @@
+/* Root background & general spacing */
+#homeRoot {
+    -fx-background-color:
+        linear-gradient(to bottom right, #F7F7FB 0%, #E7F0FF 40%, #F2F5FF 100%);
+}
+
+/* Common layout helpers */
+.root {
+    -fx-padding: 0;
+}
+
+.separator {
+    -fx-opacity: 0.6;
+}
+
+/* Image fallback keeps layout stable if logo missing */
+.image-view:empty {
+    -fx-min-height: 0.1px;
+}

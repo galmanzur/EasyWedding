@@ -1,0 +1,33 @@
+.btn {
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0.2, 0, 2);
+}
+
+/* Primary */
+.btn-primary {
+    -fx-background-color: linear-gradient(to bottom, #4F46E5, #4338CA); /* indigo */
+    -fx-text-fill: white;
+}
+.btn-primary:hover { -fx-background-color: linear-gradient(to bottom, #5850EC, #4C40D0); }
+.btn-primary:pressed { -fx-background-color: linear-gradient(to bottom, #4338CA, #3730A3); }
+
+/* Secondary */
+.btn-secondary {
+    -fx-background-color: rgba(99,102,241,0.08);
+    -fx-text-fill: #3730A3;
+    -fx-border-color: rgba(99,102,241,0.30);
+}
+.btn-secondary:hover  { -fx-background-color: rgba(99,102,241,0.14); }
+.btn-secondary:pressed{ -fx-background-color: rgba(99,102,241,0.20); }
+
+/* Focus ring */
+.btn:focused {
+    -fx-effect: dropshadow(gaussian, rgba(99,102,241,0.55), 14, 0.35, 0, 0);
+}

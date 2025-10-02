@@ -1,0 +1,5 @@
+/* View-specific tweaks for Home */
+#brandFoot {
+    /* position is managed by AnchorPane constraints from FXML */
+    -fx-opacity: 0.9;
+}
