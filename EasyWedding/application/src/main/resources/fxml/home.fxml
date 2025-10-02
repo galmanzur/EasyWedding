@@ -50,6 +50,6 @@
     </StackPane>
 
     <!-- Small brand note -->
-    <Label text="© EasyWedding" id="brandFoot"
+    <Label text="© Gal Manzur" id="brandFoot"
            AnchorPane.rightAnchor="16" AnchorPane.bottomAnchor="12"/>
 </AnchorPane>

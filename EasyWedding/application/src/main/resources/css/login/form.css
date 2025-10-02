@@ -1,0 +1,24 @@
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.input-field {
+    -fx-pref-width: 250px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.primary-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+}
+
+.secondary-button {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+}

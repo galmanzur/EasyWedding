@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.easywedding.application.controllers.SignUpController"
+            stylesheets="/css/signup/form.css">
+    <children>
+        <VBox spacing="15" alignment="CENTER" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" styleClass="signup-container">
+
+            <Label text="Sign Up" styleClass="title-label"/>
+
+            <TextField fx:id="usernameField" promptText="Username" styleClass="input-field"/>
+            <PasswordField fx:id="passwordField" promptText="Password" styleClass="input-field"/>
+
+            <ComboBox fx:id="permissionLevelCombo" promptText="Permission Level" styleClass="combo-box"/>
+
+            <Label text="Choose Wedding Option:"/>
+            <RadioButton fx:id="existingWeddingRadio" text="Join existing wedding"/>
+            <ComboBox fx:id="weddingListCombo" promptText="Select a wedding" disable="true" styleClass="combo-box"/>
+
+            <RadioButton fx:id="newWeddingRadio" text="Create new wedding"/>
+            <TextField fx:id="newWeddingDescriptionField" promptText="Wedding Description" disable="true" styleClass="input-field"/>
+            <TextField fx:id="newWeddingLocationField" promptText="Location" disable="true" styleClass="input-field"/>
+            <DatePicker fx:id="newWeddingDatePicker" promptText="Date" disable="true" styleClass="input-field"/>
+
+            <Button text="Sign Up" onAction="#onSignUp" styleClass="primary-button"/>
+            <Button text="Back to Home" onAction="#goToHome" styleClass="secondary-button"/>
+        </VBox>
+    </children>
+</AnchorPane>

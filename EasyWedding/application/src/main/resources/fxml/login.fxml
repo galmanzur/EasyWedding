@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.easywedding.application.controllers.LoginController"
+            stylesheets="/css/login/form.css">
+    <children>
+        <VBox spacing="15" alignment="CENTER" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+            <Label text="Login" styleClass="title-label"/>
+
+            <TextField fx:id="usernameField" promptText="Username" styleClass="input-field"/>
+            <PasswordField fx:id="passwordField" promptText="Password" styleClass="input-field"/>
+
+            <Button text="Login" onAction="#onLogin" styleClass="primary-button"/>
+            <Button text="Back to Home" onAction="#goToHome" styleClass="secondary-button"/>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+/* File: resources/css/signup/form.css */
+.signup-container {
+    -fx-padding: 30;
+    -fx-background-color: #f8f8f8;
+}
+
+.title-label {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.input-field, .combo-box {
+    -fx-pref-width: 250px;
+    -fx-font-size: 14px;
+}
+
+.primary-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-pref-width: 250px;
+}
+
+.secondary-button {
+    -fx-background-color: #e0e0e0;
+    -fx-pref-width: 250px;
+}
